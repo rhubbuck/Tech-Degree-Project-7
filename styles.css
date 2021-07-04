@@ -1,0 +1,418 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'header'
+    'nav'
+    'main';
+    margin: auto;
+    justify-content: center;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(61, 28, 206, 0.61);
+    padding: 12px;
+    color: white;
+}
+
+#header-item-1 {
+    margin-right: 15px;
+}
+
+#header-prof-img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 1.25em;
+    flex-basis: 35%;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: rgb(141, 221, 141);
+    border-radius: 50%;
+    position: relative;
+    top: -43px;
+    right: -26px;
+}
+#student-name{   
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px 6px;
+}
+
+.notifications {
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+.bell-icon {
+    fill: white;
+    width: 30px;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(76, 18, 143);
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    fill: white;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.alert{
+    background-color: rgb(112, 127, 194);
+    margin: 8px;
+    color: white;    
+    grid-column: 1 / span 1;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 3px 8px;
+}
+
+.alert-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: 100;
+}
+
+.main-header {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: lighter;
+    background-color: white;
+    padding: 10px;
+    margin: 2px;
+    flex: 1;
+}
+
+.empty {
+      background-color: rgb(233, 232, 232);
+    border-bottom:1px rgb(173, 172, 172) solid;
+    border-left:1px rgb(173, 172, 172) solid; 
+    flex: 2;
+}
+
+section {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.traffic-nav{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
+}
+.traffic-nav-link{    
+    padding: 5px;
+    font-weight: 400;
+}
+canvas{
+    max-width: 100%;
+}
+img {
+    border-radius: 50%;
+}
+.social {
+    margin: 5%;
+    padding: 15px 0;
+}
+.soc-text > h3 {
+    font-size: 1.15em;
+    color: rgba(61, 28, 206, 0.61); 
+}
+.soc-text > p {
+    font-size: 2.6em;
+    color:rgb(87, 87, 87);
+}
+.soc-stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(236, 236, 236, 0.822);
+    margin: 10px 0;
+    padding-top: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(168, 168, 168);
+}
+.soc-svg {
+    width: 40px;
+    height: 40px;
+    margin: 0px 15px;
+}
+.soc-text {
+    margin-left: 10px;
+}
+.soc-svg {
+    background-color: rgba(61, 28, 206, 0.61);
+    border-radius: 50%;
+}
+.facebook-svg, .twitter-svg, .instagram-svg {
+    fill: white;
+}
+.members, .recent-activity {
+    text-align: center;
+}
+.arrow {
+    display: none;
+}
+.new-member, .activity {
+    border-bottom: 2px solid rgb(206, 201, 201);
+}
+.new-member:last-child, .activity:last-child {
+    border-bottom: none;
+}
+.members p, .members a, .recent-activity p {
+    font-size: .85em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.settings-buttons {
+    display: flex;
+    justify-content:space-around;
+}
+.timezone {
+    width: 100%;
+}
+.settings-buttons button {
+    width: 40%;
+}
+
+.members h3, .recent-activity h3 {
+    text-align: start;
+}
+.members, .recent-activity, .message, .daily-traffic, .mobile-users {
+    margin: 5%;
+}
+.new-member, .activity {
+    padding: 5vh 0;
+}
+.new-member img, .activity img {
+    height: 25vh;
+}
+.member-info a {
+    text-decoration: none;
+}
+form {
+padding-top: 15px;;
+}
+form input, form textarea, form button {
+    margin: 10px;
+    border-radius: 5px;
+}
+form input {
+    height: 11vh;
+    background-color: rgb(240, 234, 234);
+}
+form textarea {
+    height: 40vh;
+    background-color: rgb(240, 234, 234);
+}
+form button {
+    height: 11vh;
+    background-color: rgba(61, 28, 206, 0.61);
+    color: white;
+}
+.message h3 {
+    margin-left: 10px;
+}
+.settings {
+    padding: 20px 35px;
+}
+.switch-light {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+span {
+    flex-basis: 20%;
+    margin-left: auto;
+}
+.switch-light > input {
+    flex-basis: 30%;
+}
+.switch-container {
+    margin: 20px 0;
+}
+#switch2 {
+    margin-top: 20px;
+}
+#timezone {
+    background-color: rgb(240, 234, 234);
+    border-radius: 5px;
+    height: 11vh;
+    margin: 15px 0;
+}
+.settings-buttons {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.settings-buttons > button {
+    height: 11vh;
+    border-radius: 5px;
+}
+#save {
+    background-color: rgba(61, 28, 206, 0.61);
+    color: white;
+}
+#cancel {
+    background-color: rgb(124, 124, 124);
+    color: white;
+}
+span {
+    font-size: .75em;
+}
+
+
+@media (min-width: 768px) {
+    .grid-container{
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header header"
+            "nav main";
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: left;
+    }
+    main {
+        grid-template-columns: 48%;
+    }
+    #notifications {
+        margin-left: auto;
+    }
+    .members, .recent-activity, .message, .daily-traffic, .mobile-users {
+        margin: 0;
+    }
+    .main-header, .alert, .traffic, .social, .members, .recent-activity, .message, .settings {
+        grid-column: 1 / span 2;
+    }
+    .daily-traffic {
+        grid-column: 1 / span 1;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid lightgray;
+    }
+    #daily-traffic-heading {
+        padding-bottom: 5.5em;
+    }
+    .mobile-users {
+        grid-column: 2 / span 1;
+    }
+    .social {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .social > h3 {
+        width: 100%;
+    }
+    .new-member, .activity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .member-info, .activity-text {
+        margin-right: auto;
+        padding-left: 2em;
+        text-align: left;
+    }
+    .arrow {
+        display: block;
+    }
+    .switch-light {
+        justify-content: left;
+    }
+    span {
+        margin: 0;
+        flex-basis: 10%;
+    }
+    #span1 {
+        margin-left: 40px;
+    }
+    #span2 {
+        margin-left: 72px;
+    }
+}
+    @media (min-width: 1024px) {
+        .members, .message {
+            grid-column: 1 / span 1;
+            border-right: 1px solid lightgray;
+        }
+        .recent-activity, .settings {
+            grid-column: 2 / span 1;
+        }
+        .message, .settings{
+            padding: 0;
+        }
+        .settings-buttons {
+            padding: 0;
+        }
+        .settings {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        span {
+            flex-basis: 22%;
+        }
+
+    }
