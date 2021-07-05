@@ -54,7 +54,7 @@ h1 {
     top: -43px;
     right: -26px;
 }
-#student-name{   
+#student-name {   
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -69,8 +69,28 @@ h1 {
 .bell-icon {
     fill: white;
     width: 30px;
+    transition: .5s ease-out;
 }
 
+.bell-icon:hover {
+    transform: scale(1.3) translate(-4px, 4px);
+}
+#popup {
+    background-color: white;
+    color: rgb(76, 18, 143);
+    border-radius: 5px;
+    margin: 3px;
+    padding: 3px;
+    width: 20vw;
+    position: absolute;
+    right: 11vw;
+    top: 10vh;
+}
+#popupMessage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 nav {
     grid-area: nav;
     display: flex;
@@ -156,7 +176,7 @@ section {
 canvas{
     max-width: 100%;
 }
-img {
+.prof-img {
     border-radius: 50%;
 }
 .social {
@@ -359,6 +379,9 @@ span {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+    .soc-stat {
+        min-width: 25vw;
     }
     .social > h3 {
         width: 100%;
