@@ -7,6 +7,8 @@ const notification = document.getElementById('notifications');
 const userName = document.getElementById('form-user-field');
 const message = document.getElementById('message-input');
 const form = document.getElementById('form');
+const trafficList = document.getElementById('traffic-list');
+const trafficLinks = document.getElementsByClassName('traffic-nav-link');
 //preloaded alert box
 
 alertBox.innerHTML = `
@@ -120,3 +122,24 @@ cancelButton.addEventListener('click', (e) => {
 });
 
 load();
+
+// set traffic chart active state
+const hourlyLink = document.getElementById('hourly-select');
+const dailyLink = document.getElementById('daily-select');
+const weeklyLink = document.getElementById('weekly-select');
+const monthlyLink = document.getElementById('monthly-select');
+
+function setNavLinkActive (navLinkVar) {
+    navLinkVar.addEventListener('click', (e) => {
+        let elements = document.getElementsByClassName('traffic-nav-link');
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.remove('active');
+         }
+         navLinkVar.classList.add('active');
+        })
+};
+
+setNavLinkActive(dailyLink);
+setNavLinkActive(hourlyLink);
+setNavLinkActive(weeklyLink);
+setNavLinkActive(monthlyLink);
